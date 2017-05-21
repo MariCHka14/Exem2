@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:300,300i');
+@import "normalize";
+@import "variables";
+@import "mixin";
+@import "grid";
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?49x0f');
+  src:  url('../fonts/icomoon.eot?49x0f#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?49x0f') format('truetype'),
+    url('../fonts/icomoon.woff?49x0f') format('woff'),
+    url('../fonts/icomoon.svg?49x0f#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-facebook2:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-vimeo:before {
+  content: "\eaa0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+
+
+*, *:after, *:before{
+	@include box-sizing;
+}
+
+body{
+	font-family: $main-font;
+	color: $font-color;
+}
+.bo-hello{
+    position: relative;
+    // height: 100vh;
+    background: #f9f8fb url(../img/bd_first.png) no-repeat center center;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;   
+}
+
+.bo-header{
+	padding-top: 30px;
+}
+
+.bo-header .logo{
+	margin-top: 20px;
+}
+
+.bo-header-nav{
+    float: right;
+    list-style: none; 
+    li{
+    float: left;    
+    font-size: 1.14rem;
+    font-weight: $font-weight;
+    a{
+    position: relative;
+    text-decoration: none;
+    color: $header-color;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    border-radius: 1.1rem;
+    &:hover{
+    	border: 1px solid $header-color;
+    	@include transition (all, 0.5s, ease);
+    }
+}
+    }  
+    
+}
+
+.container-info{
+	color: $header-color;
+	text-align: center;
+	h1{
+		font-family:$header-font;
+		font-size: 2.1rem;
+		font-weight: 0.75rem;
+		letter-spacing: 7px;
+		text-transform: uppercase;		
+		padding-top: 170px;		
+	}
+	p{
+		padding-bottom:330px; 
+	}
+}
+
+.bo-hello__link{
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+	background-color:  #19bd9a;	
+	width: 36px;
+	height: 36px;
+    bottom: 77px;
+    display: block;
+    transform: translateX(-50%);
+    a{
+    text-decoration: none;
+    }
+    &:hover, &:focus{
+    	opacity: 0.9;
+    }
+
+    .icon-angle-down{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    color: $header-color;
+}   	
+    }
+
+.portfolio-info{
+	text-align: center;
+	h2{
+		font-family: $header-font;
+		text-transform: uppercase;
+		padding-top: 90px;
+		font-size: 1.4rem;
+	}
+}
+
+.slide_text{
+		text-align: right;
+	}
