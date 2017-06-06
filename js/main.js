@@ -17,36 +17,36 @@ $('.bo-header-nav').on('click', 'a', function(enent){
 	}, 500);
 })
 
-$(window).scroll(function(){
-	var dist = $('#about').offset().top;
-		if ($(window).scrollTop() >= dist){ 
-			$('.ch-container-logo').css('background', 'rgba(255, 255, 255, 0.7)');
+// $(window).scroll(function(){
+// 	var dist = $('#about').offset().top;
+// 		if ($(window).scrollTop() >= dist){ 
+// 			$('.ch-container-logo').css('background', 'rgba(255, 255, 255, 0.7)');
 				
-		}else{
-			$('.ch-container-logo').css('background', 'transparent');
-		}
-});
+// 		}else{
+// 			$('.ch-container-logo').css('background', 'transparent');
+// 		}
+// });
 
 
 $('.grid').masonry({
-  // options
   itemSelector: '.grid-item',
   columnWidth: '.grid-item-size',
   percentPosition: true,
-  gutter: 5,
+  horizontalOrder: true,
+  gutter: 5
 });
 
 var $grid = $('.grid').isotope({
   itemSelector: '.grid-item',
   percentPosition: true,
   masonry: {
-    // use outer width of grid-sizer for columnWidth
     columnWidth: '.grid-item-size',
     gutter: 5,
+    horizontalOrder: true
   }
 })
 
-// filter items on button click
+
 $('.filter-button-group').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $grid.isotope({ filter: filterValue });

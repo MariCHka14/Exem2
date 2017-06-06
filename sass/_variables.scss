@@ -3,11 +3,16 @@ $header-font:'Source Sans Pro', sans-serif;
 $font-color: #81868e;
 $header-color: #ffffff;
 $font-size: 14px;
-$font-height: 1.5; //line-height
+$main-font-size:16px;
+$title-font-size: 20px;
+$header-font-size:35px;
+$font-height: 1.8;
 $font-weight: 400;
+$title-font-weight:300;
 $color-bg: #fff;
+$main-color-bg:#e8e5e5;
 
 
 /** Grid variables **/
-$container-width: 1170px;
+$container-width: 1200px;
 $col-padding: 15px;

@@ -49,8 +49,6 @@
   content: "\eaca";
 }
 
-
-
 *, *:after, *:before{
 	@include box-sizing;
 }
@@ -58,10 +56,10 @@
 body{
 	font-family: $main-font;
 	color: $font-color;
+  font-size: $font-size;
 }
 .bo-hello{
-    position: relative;
-    // height: 100vh;
+    position: relative;    
     background: #f9f8fb url(../img/bd_first.png) no-repeat center center;
     -webkit-background-size: cover;
          -o-background-size: cover;
@@ -70,18 +68,17 @@ body{
 
 .bo-header{
 	padding-top: 30px;
+  .logo{
+  margin-top: 20px;
+  }
 }
 
-.bo-header .logo{
-	margin-top: 20px;
-}
-
-.bo-header-nav{
+.bo-header__nav{
     float: right;
     list-style: none; 
     li{
     float: left;    
-    font-size: 1.14rem;
+    font-size: $main-font-size;
     font-weight: $font-weight;
     a{
     position: relative;
@@ -94,9 +91,8 @@ body{
     	border: 1px solid $header-color;
     	@include transition (all, 0.5s, ease);
     }
-}
-    }  
-    
+  }
+ }     
 }
 
 .container-info{
@@ -104,27 +100,27 @@ body{
 	text-align: center;
 	h1{
 		font-family:$header-font;
-		font-size: 2.1rem;
-		font-weight: 0.75rem;
-		letter-spacing: 7px;
-		text-transform: uppercase;		
-		padding-top: 170px;		
+		font-size: $header-font-size;
+		font-weight: $title-font-weight;
+    letter-spacing: 3px;
+    word-spacing: 20px;
+    text-transform: uppercase;
+    padding: 175px 0 10px;		
 	}
 	p{
-		padding-bottom:330px; 
+		padding-bottom:319px; 
+    font-size: $main-font-size;
 	}
 }
 
 .bo-hello__link{
     position: absolute;
+    background-color:  #19bd9a;
     border-radius: 50%;
-    left: 50%;
-	background-color:  #19bd9a;	
-	width: 36px;
-	height: 36px;
-    bottom: 77px;
-    display: block;
-    transform: translateX(-50%);
+    left: 49%;
+    bottom: 77px; 		
+  	width: 36px;
+  	height: 36px;    
     a{
     text-decoration: none;
     }
@@ -137,19 +133,49 @@ body{
     top: 30%;
     left: 35%;
     color: $header-color;
-}   	
-    }
+    }   	
+  }
 
-.portfolio-info{
-	text-align: center;
-	h2{
-		font-family: $header-font;
-		text-transform: uppercase;
-		padding-top: 90px;
-		font-size: 1.4rem;
-	}
+.bo-portfolio{
+  background: $main-color-bg;
+  padding: 90px 0 100px;
+    .portfolio-info{
+    text-align: center;
+      h2{
+        font-family: $header-font;
+        text-transform: uppercase;
+        font-size: $title-font-size;
+        letter-spacing: 3px;
+        word-spacing: 3px;
+      }
+      p{
+
+      }
+    }
+  }
+    
+.button-group{
+  position: relative;
+  padding: 80px 0 75px;
+  text-align: center;
+    .button{
+      background: transparent;
+      border: 1.5px solid transparent;
+      padding: 15px;
+      font-size: $main-font-size;
+      &:hover, &:active, &:focus{
+        border-bottom: 1.5px solid #19bd9a;
+        outline: none;
+        @include transition(width, 0.5s, ease);
+        }
+      }   
 }
 
-.slide_text{
-		text-align: right;
-	}
+.grid-item-size,
+.grid-item { 
+  width: 23.7%; 
+}
+.grid-item{
+  margin-bottom: 5px;
+}
+
